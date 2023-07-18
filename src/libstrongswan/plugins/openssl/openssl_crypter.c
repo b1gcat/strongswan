@@ -225,6 +225,9 @@ openssl_crypter_t *openssl_crypter_create(encryption_algorithm_t algo,
 
 	switch (algo)
 	{
+		case ENCR_SM4_CBC:
+			this->cipher = EVP_get_cipherbyname("sm4-cbc");
+                        break;
 		case ENCR_NULL:
 			this->cipher = EVP_enc_null();
 			key_size = 0;
