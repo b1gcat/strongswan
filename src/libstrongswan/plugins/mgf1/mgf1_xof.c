@@ -242,6 +242,9 @@ mgf1_xof_t *mgf1_xof_create(ext_out_function_t algorithm)
 
 	switch (algorithm)
 	{
+		case XOF_MGF1_SM3:
+			hash_alg = HASH_SM3;
+			break;
 		case XOF_MGF1_SHA1:
 			hash_alg = HASH_SHA1;
 			break;

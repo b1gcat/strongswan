@@ -43,6 +43,8 @@ METHOD(plugin_t, get_features, int,
 {
 	static plugin_feature_t f[] = {
 		PLUGIN_REGISTER(XOF, mgf1_xof_create),
+			PLUGIN_PROVIDE(XOF, XOF_MGF1_SM3),
+				PLUGIN_DEPENDS(HASHER, HASH_SM3),
 			PLUGIN_PROVIDE(XOF, XOF_MGF1_SHA1),
 				PLUGIN_DEPENDS(HASHER, HASH_SHA1),
 			PLUGIN_PROVIDE(XOF, XOF_MGF1_SHA224),

@@ -157,6 +157,7 @@
               0x0B           "hmacWithSHA512"			OID_HMAC_SHA512
               0x0C           "hmacWithSHA512-224"		OID_HMAC_SHA512_224
               0x0D           "hmacWithSHA512-256"		OID_HMAC_SHA512_256
+              0x0E           "hmacWithSM3"		    OID_HMAC_SM3
             0x03             "encryptionAlgorithm"
               0x07           "3des-ede-cbc"				OID_3DES_EDE_CBC
       0xCE                   ""
@@ -448,6 +449,7 @@
                 0x2A         "id-aes256-CBC"			OID_AES256_CBC
                 0x2E         "id-aes256-GCM"			OID_AES256_GCM
                 0x2F         "id-aes256-CCM"			OID_AES256_CCM
+                0x3A         "id-sm4-CBC"			OID_SM4_CBC
               0x02           "hashAlgs"
                 0x01         "id-sha256"				OID_SHA256
                 0x02         "id-sha384"				OID_SHA384
@@ -461,6 +463,7 @@
                 0x0A         "id-sha3-512"				OID_SHA3_512
                 0x0B         "id-shake128"
                 0x0C         "id-shake256"
+                0x0D         "id-sm3"					OID_SM3
               0x03           "sigAlgs"
                 0x09         "id-ecdsa-with-sha3-224"			OID_ECDSA_WITH_SHA3_224
                 0x0A         "id-ecdsa-with-sha3-256"			OID_ECDSA_WITH_SHA3_256

@@ -212,6 +212,7 @@ static kernel_algorithm_t encryption_algs[] = {
 /*	{ENCR_DES_IV32,				"***"				}, */
 	{ENCR_NULL,					"cipher_null"		},
 	{ENCR_AES_CBC,				"aes"				},
+	{ENCR_SM4_CBC,				"sm4"				},
 	{ENCR_AES_CTR,				"rfc3686(ctr(aes))"	},
 	{ENCR_AES_CCM_ICV8,			"rfc4309(ccm(aes))"	},
 	{ENCR_AES_CCM_ICV12,		"rfc4309(ccm(aes))"	},
@@ -241,6 +242,7 @@ static kernel_algorithm_t integrity_algs[] = {
 	{AUTH_HMAC_SHA2_256_96,		"sha256"			},
 	{AUTH_HMAC_SHA2_256_128,	"hmac(sha256)"		},
 	{AUTH_HMAC_SHA2_256_256,	"hmac(sha256)"		},
+	{AUTH_HMAC_SHA2_256_256,	"hmac(sm3)"		},
 	{AUTH_HMAC_SHA2_384_192,	"hmac(sha384)"		},
 	{AUTH_HMAC_SHA2_384_384,	"hmac(sha384)"		},
 	{AUTH_HMAC_SHA2_512_256,	"hmac(sha512)"		},

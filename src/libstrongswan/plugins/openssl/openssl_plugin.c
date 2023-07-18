@@ -378,6 +378,7 @@ METHOD(plugin_t, get_features, int,
 		PLUGIN_PROVIDE(CUSTOM, "openssl-threading"),
 		/* crypters */
 		PLUGIN_REGISTER(CRYPTER, openssl_crypter_create),
+			PLUGIN_PROVIDE(CRYPTER, ENCR_SM4_CBC, 16),
 #ifndef OPENSSL_NO_AES
 			PLUGIN_PROVIDE(CRYPTER, ENCR_AES_CBC, 16),
 			PLUGIN_PROVIDE(CRYPTER, ENCR_AES_CBC, 24),
@@ -420,6 +421,7 @@ METHOD(plugin_t, get_features, int,
 			PLUGIN_PROVIDE(CRYPTER, ENCR_NULL, 0),
 		/* hashers */
 		PLUGIN_REGISTER(HASHER, openssl_hasher_create),
+			PLUGIN_PROVIDE(HASHER, HASH_SM3),
 #ifndef OPENSSL_NO_MD2
 			PLUGIN_PROVIDE(HASHER, HASH_MD2),
 #endif
@@ -461,6 +463,7 @@ METHOD(plugin_t, get_features, int,
 #endif
 #ifndef OPENSSL_NO_HMAC
 		PLUGIN_REGISTER(PRF, openssl_hmac_prf_create),
+			PLUGIN_PROVIDE(PRF, PRF_HMAC_SM3),
 #ifndef OPENSSL_NO_MD5
 			PLUGIN_PROVIDE(PRF, PRF_HMAC_MD5),
 #endif
@@ -475,6 +478,7 @@ METHOD(plugin_t, get_features, int,
 			PLUGIN_PROVIDE(PRF, PRF_HMAC_SHA2_512),
 #endif
 		PLUGIN_REGISTER(SIGNER, openssl_hmac_signer_create),
+			PLUGIN_PROVIDE(SIGNER, AUTH_HMAC_SM3),
 #ifndef OPENSSL_NO_MD5
 			PLUGIN_PROVIDE(SIGNER, AUTH_HMAC_MD5_96),
 			PLUGIN_PROVIDE(SIGNER, AUTH_HMAC_MD5_128),

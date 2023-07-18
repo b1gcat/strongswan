@@ -26,6 +26,7 @@ ENUM(ext_out_function_names, XOF_UNDEFINED, XOF_CHACHA20,
 	"XOF_MGF1_SHA512",
 	"XOF_SHAKE128",
 	"XOF_SHAKE256",
+	"XOF_MGF1_SM3",
 	"XOF_CHACHA20"
 );
 
@@ -40,6 +41,8 @@ ext_out_function_t xof_mgf1_from_hash_algorithm(hash_algorithm_t alg)
 			return XOF_MGF1_SHA1;
 		case HASH_SHA224:
 			return XOF_MGF1_SHA224;
+		case HASH_SM3:
+			return XOF_MGF1_SM3;
 		case HASH_SHA256:
 			return XOF_MGF1_SHA256;
 		case HASH_SHA384:

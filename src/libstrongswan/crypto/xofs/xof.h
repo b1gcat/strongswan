@@ -47,8 +47,11 @@ enum ext_out_function_t {
 	XOF_SHAKE_128,
 	/** FIPS 202 */
 	XOF_SHAKE_256,
+	
+	XOF_MGF1_SM3,
 	/** RFC 7539 ChaCha20 */
 	XOF_CHACHA20,
+
 };
 
 /**
