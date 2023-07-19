@@ -53,6 +53,7 @@ static struct {
 	{HASH_SHA1,			"sha1",			HASH_SIZE_SHA1		},
 	{HASH_SHA224,		"sha224",		HASH_SIZE_SHA224	},
 	{HASH_SHA256,		"sha256",		HASH_SIZE_SHA256	},
+	{HASH_SM3,		"sm3",			HASH_SIZE_SHA256	},
 	{HASH_SHA384,		"sha384",		HASH_SIZE_SHA384	},
 	{HASH_SHA512,		"sha512",		HASH_SIZE_SHA512	},
 };

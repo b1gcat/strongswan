@@ -45,6 +45,8 @@ pseudo_random_function_t pseudo_random_function_from_oid(int oid)
 {
 	switch (oid)
 	{
+		case OID_HMAC_SM3:
+			return PRF_HMAC_SM3;
 		case OID_HMAC_SHA1:
 			return PRF_HMAC_SHA1;
 		case OID_HMAC_SHA256:

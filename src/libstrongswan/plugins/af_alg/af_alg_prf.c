@@ -60,6 +60,7 @@ static struct {
 	bool xcbc;
 } algs[AF_ALG_PRF] = {
 	{PRF_HMAC_SHA1,			"hmac(sha1)",		20,		FALSE,	},
+	{PRF_HMAC_SM3,			"hmac(sm3)",		32,		FALSE,	},
 	{PRF_HMAC_SHA2_256,		"hmac(sha256)",		32,		FALSE,	},
 	{PRF_HMAC_MD5,			"hmac(md5)",		16,		FALSE,	},
 	{PRF_HMAC_SHA2_384,		"hmac(sha384)",		48,		FALSE,	},

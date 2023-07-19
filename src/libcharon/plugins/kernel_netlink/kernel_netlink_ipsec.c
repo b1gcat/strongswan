@@ -242,7 +242,7 @@ static kernel_algorithm_t integrity_algs[] = {
 	{AUTH_HMAC_SHA2_256_96,		"sha256"			},
 	{AUTH_HMAC_SHA2_256_128,	"hmac(sha256)"		},
 	{AUTH_HMAC_SHA2_256_256,	"hmac(sha256)"		},
-	{AUTH_HMAC_SHA2_256_256,	"hmac(sm3)"		},
+	{AUTH_HMAC_SM3,			"hmac(sm3)"		},
 	{AUTH_HMAC_SHA2_384_192,	"hmac(sha384)"		},
 	{AUTH_HMAC_SHA2_384_384,	"hmac(sha384)"		},
 	{AUTH_HMAC_SHA2_512_256,	"hmac(sha512)"		},
