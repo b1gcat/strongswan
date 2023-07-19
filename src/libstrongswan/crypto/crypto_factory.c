@@ -169,6 +169,7 @@ METHOD(crypto_factory_t, create_crypter, crypter_t*,
 
 	this->lock->read_lock(this->lock);
 	enumerator = this->crypters->create_enumerator(this->crypters);
+
 	while (enumerator->enumerate(enumerator, &entry))
 	{
 		if (entry->algo == algo)

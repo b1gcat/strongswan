@@ -227,6 +227,7 @@ hash_algorithm_t hasher_algorithm_from_integrity(integrity_algorithm_t alg,
 			case AUTH_HMAC_SHA2_384_192:
 				*length = 24;
 				break;
+			case AUTH_HMAC_SM3:
 			case AUTH_HMAC_SHA2_256_256:
 			case AUTH_HMAC_SHA2_512_256:
 				*length = 32;
@@ -577,3 +578,4 @@ hash_algorithm_t hasher_from_signature_scheme(signature_scheme_t scheme,
 	}
 	return HASH_UNKNOWN;
 }
+
