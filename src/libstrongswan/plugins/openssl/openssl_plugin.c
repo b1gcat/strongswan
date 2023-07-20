@@ -690,6 +690,7 @@ METHOD(plugin_t, get_features, int,
 #ifndef OPENSSL_NO_ECDH
 		/* EC DH groups */
 		PLUGIN_REGISTER(KE, openssl_ec_diffie_hellman_create),
+			PLUGIN_PROVIDE(KE, SM2),
 			PLUGIN_PROVIDE(KE, ECP_256_BIT),
 			PLUGIN_PROVIDE(KE, ECP_384_BIT),
 			PLUGIN_PROVIDE(KE, ECP_521_BIT),

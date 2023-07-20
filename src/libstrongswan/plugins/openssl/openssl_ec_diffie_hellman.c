@@ -279,6 +279,8 @@ int openssl_ecdh_group_to_nid(key_exchange_method_t group)
 {
 	switch (group)
 	{
+		case SM2:
+			return NID_sm2;
 		case ECP_192_BIT:
 			return NID_X9_62_prime192v1;
 		case ECP_224_BIT:

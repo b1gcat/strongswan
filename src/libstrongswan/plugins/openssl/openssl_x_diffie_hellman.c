@@ -176,7 +176,6 @@ key_exchange_t *openssl_x_diffie_hellman_create(key_exchange_method_t ke)
 		default:
 			break;
 	}
-
 	if (!ctx ||
 		EVP_PKEY_keygen_init(ctx) <= 0 ||
 		EVP_PKEY_keygen(ctx, &key) <= 0)

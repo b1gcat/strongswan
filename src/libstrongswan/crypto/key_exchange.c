@@ -44,6 +44,7 @@ ENUM_NEXT(key_exchange_method_names, MODP_1024_160, CURVE_448, ECP_521_BIT,
 	"ECP_384_BP",
 	"ECP_512_BP",
 	"CURVE_25519",
+	"SM2",
 	"CURVE_448");
 ENUM_NEXT(key_exchange_method_names, MODP_NULL, MODP_NULL, CURVE_448,
 	"MODP_NULL");
@@ -84,6 +85,7 @@ ENUM_NEXT(key_exchange_method_names_short, MODP_1024_160, CURVE_448, ECP_521_BIT
 	"ecp384bp",
 	"ecp512bp",
 	"curve25519",
+	"sm2",
 	"curve448");
 ENUM_NEXT(key_exchange_method_names_short, MODP_NULL, MODP_NULL, CURVE_448,
 	"modpnull");
@@ -534,6 +536,7 @@ bool key_exchange_is_ecdh(key_exchange_method_t ke)
 		case ECP_384_BP:
 		case ECP_512_BP:
 		case CURVE_25519:
+		case SM2:
 		case CURVE_448:
 			return TRUE;
 		default:
@@ -551,6 +554,10 @@ bool key_exchange_verify_pubkey(key_exchange_method_t ke, chunk_t value)
 
 	switch (ke)
 	{
+		case SM2:
+			valid = value.len == 64;
+			break;
+
 		case MODP_768_BIT:
 		case MODP_1024_BIT:
 		case MODP_1536_BIT:
